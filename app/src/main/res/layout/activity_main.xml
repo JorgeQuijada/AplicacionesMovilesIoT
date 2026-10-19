@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/tvAvatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/primary"
+            android:background="@drawable/bg_circle"
+            android:gravity="center"
+            android:text="A"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="15dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvBienvenida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bienvenido"
+                android:textColor="@color/primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tvRol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Administrador"
+                android:textColor="@color/text_dark"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPerfil"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Perfil"
+            android:textSize="12sp"
+            app:cornerRadius="8dp"
+            android:backgroundTint="#3B82F6" />
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAbrir"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="ABRIR PUERTA"
+        android:textSize="18sp"
+        app:cornerRadius="16dp"
+        android:backgroundTint="#10B981"
+        android:layout_marginBottom="15dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCerrar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="CERRAR PUERTA"
+        android:textSize="18sp"
+        app:cornerRadius="16dp"
+        android:backgroundTint="#EF4444"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Tarjeta de Estado Mejorada -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/white"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvIconoCandado"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/bg_circle_red"
+                android:gravity="center"
+                android:text="🔒"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/tvEstado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CERRADO"
+                android:textColor="#EF4444"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnIrAPin"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="🔑 INGRESAR PIN DE SEGURIDAD"
+        android:textSize="16sp"
+        app:cornerRadius="12dp"
+        android:backgroundTint="#F59E0B"
+        android:layout_marginBottom="15dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Historial de Eventos:"
+        android:textColor="@color/text_dark"
+        android:textSize="14sp"
+        android:layout_marginBottom="5dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#F9FAFB"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/tvLogs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sistema iniciado.\n"
+            android:textColor="#4B5563"
+            android:textSize="12sp"
+            android:fontFamily="monospace" />
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="VOLVER AL LOGIN"
+        android:textSize="14sp"
+        android:backgroundTint="#9CA3AF"
+        app:cornerRadius="12dp"
+        android:layout_marginTop="15dp" />
+</LinearLayout>
